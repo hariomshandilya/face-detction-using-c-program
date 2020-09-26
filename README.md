@@ -113,4 +113,6 @@ else
             circle( img, center, radius, color, 3, 8, 0 ); 
         } 
     } 
-  
+   // Show Processed Image with detected faces 
+    imshow( "Face Detection", img ); 
+    

@@ -40,3 +40,15 @@ int main( int argc, const char** argv )
         // Capture frames from video and detect faces 
         cout << "Face Detection Started...." << endl; 
         while(1) 
+{ 
+            capture >> frame; 
+            if( frame.empty() ) 
+                break; 
+            Mat frame1 = frame.clone(); 
+            detectAndDraw( frame1, cascade, nestedCascade, scale );  
+            char c = (char)waitKey(10); 
+          
+            // Press q to exit from window 
+            if( c == 27 || c == 'q' || c == 'Q' )  
+                break; 
+        } 

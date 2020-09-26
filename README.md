@@ -86,3 +86,9 @@ vector<Rect> faces, faces2;
         double aspect_ratio = (double)r.width/r.height; 
         if( 0.75 < aspect_ratio && aspect_ratio < 1.3 ) 
         
+ { 
+            center.x = cvRound((r.x + r.width*0.5)*scale); 
+            center.y = cvRound((r.y + r.height*0.5)*scale); 
+            radius = cvRound((r.width + r.height)*0.25*scale); 
+            circle( img, center, radius, color, 3, 8, 0 ); 
+        } 

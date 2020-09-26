@@ -19,3 +19,7 @@ int main( int argc, const char** argv )
     // VideoCapture class for playing video for which faces to be detected 
     VideoCapture capture;  
     Mat frame, image; 
+ // PreDefined trained XML classifiers with facial features 
+    CascadeClassifier cascade, nestedCascade;  
+    double scale=1; 
+  

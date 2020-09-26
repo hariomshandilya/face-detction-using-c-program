@@ -57,3 +57,7 @@ int main( int argc, const char** argv )
         cout<<"Could not Open Camera"; 
     return 0; 
 } 
+void detectAndDraw( Mat& img, CascadeClassifier& cascade, 
+                    CascadeClassifier& nestedCascade, 
+                    double scale) 
+{ 

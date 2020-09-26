@@ -33,3 +33,10 @@ int main( int argc, const char** argv )
   
     // Change path before execution  
     cascade.load( "../../haarcascade_frontalcatface.xml" ) ;  
+// Start Video..1) 0 for WebCam 2) "Path to Video" for a Local Video 
+    capture.open(0);  
+    if( capture.isOpened() ) 
+    { 
+        // Capture frames from video and detect faces 
+        cout << "Face Detection Started...." << endl; 
+        while(1) 

@@ -61,3 +61,12 @@ void detectAndDraw( Mat& img, CascadeClassifier& cascade,
                     CascadeClassifier& nestedCascade, 
                     double scale) 
 { 
+vector<Rect> faces, faces2; 
+    Mat gray, smallImg; 
+  
+    cvtColor( img, gray, COLOR_BGR2GRAY ); // Convert to Gray Scale 
+    double fx = 1 / scale; 
+  
+    // Resize the Grayscale Image  
+    resize( gray, smallImg, Size(), fx, fx, INTER_LINEAR );  
+    equalizeHist( smallImg, smallImg );

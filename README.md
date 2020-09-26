@@ -52,3 +52,8 @@ int main( int argc, const char** argv )
             if( c == 27 || c == 'q' || c == 'Q' )  
                 break; 
         } 
+} 
+    else
+        cout<<"Could not Open Camera"; 
+    return 0; 
+} 

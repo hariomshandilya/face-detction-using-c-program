@@ -73,3 +73,16 @@ vector<Rect> faces, faces2;
      // Detect faces of different sizes using cascade classifier  
     cascade.detectMultiScale( smallImg, faces, 1.1,  
                             2, 0|CASCADE_SCALE_IMAGE, Size(30, 30) ); 
+                            // Draw circles around the faces 
+    for ( size_t i = 0; i < faces.size(); i++ ) 
+    { 
+        Rect r = faces[i]; 
+        Mat smallImgROI; 
+        vector<Rect> nestedObjects; 
+        Point center; 
+        Scalar color = Scalar(255, 0, 0); // Color for Drawing tool 
+        int radius; 
+  
+        double aspect_ratio = (double)r.width/r.height; 
+        if( 0.75 < aspect_ratio && aspect_ratio < 1.3 ) 
+        

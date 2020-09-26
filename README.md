@@ -14,3 +14,8 @@ using namespace cv;
 void detectAndDraw( Mat& img, CascadeClassifier& cascade,  
                 CascadeClassifier& nestedCascade, double scale ); 
 string cascadeName, nestedCascadeName;
+int main( int argc, const char** argv ) 
+{ 
+    // VideoCapture class for playing video for which faces to be detected 
+    VideoCapture capture;  
+    Mat frame, image; 

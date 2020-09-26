@@ -7,3 +7,10 @@ This program uses the OpenCV library to detect faces in a live stream from webca
 #include "/usr/local/include/opencv2/highgui.hpp" 
 #include "/usr/local/include/opencv2/imgproc.hpp" 
 #include <iostream> 
+using namespace std; 
+using namespace cv; 
+  
+// Function for Face Detection 
+void detectAndDraw( Mat& img, CascadeClassifier& cascade,  
+                CascadeClassifier& nestedCascade, double scale ); 
+string cascadeName, nestedCascadeName;

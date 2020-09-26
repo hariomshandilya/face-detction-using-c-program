@@ -23,3 +23,8 @@ int main( int argc, const char** argv )
     CascadeClassifier cascade, nestedCascade;  
     double scale=1; 
   
+// Load classifiers from "opencv/data/haarcascades" directory  
+    nestedCascade.load( "../../haarcascade_eye_tree_eyeglasses.xml" ) ; 
+  
+    // Change path before execution  
+    cascade.load( "../../haarcascade_frontalcatface.xml" ) ;  

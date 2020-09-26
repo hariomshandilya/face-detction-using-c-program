@@ -28,3 +28,8 @@ int main( int argc, const char** argv )
   
     // Change path before execution  
     cascade.load( "../../haarcascade_frontalcatface.xml" ) ;  
+// Load classifiers from "opencv/data/haarcascades" directory  
+    nestedCascade.load( "../../haarcascade_eye_tree_eyeglasses.xml" ) ; 
+  
+    // Change path before execution  
+    cascade.load( "../../haarcascade_frontalcatface.xml" ) ;  
